@@ -1,0 +1,3 @@
+Hello, world!
+fgamma(1)=1
+fgamma(1)=1
