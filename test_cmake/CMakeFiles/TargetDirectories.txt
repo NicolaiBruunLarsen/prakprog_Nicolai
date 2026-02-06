@@ -1,0 +1,3 @@
+/home/nicolai/projects/prakprog_Nicolai/exercises/test/CMakeFiles/test_program.dir
+/home/nicolai/projects/prakprog_Nicolai/exercises/test/CMakeFiles/edit_cache.dir
+/home/nicolai/projects/prakprog_Nicolai/exercises/test/CMakeFiles/rebuild_cache.dir
