@@ -1,0 +1,23 @@
+      float eps=1.19209e-07
+     double eps=2.22045e-16
+long double eps=1.0842e-19
+Using limts
+1.19209e-07
+2.22045e-16
+1.0842e-19
+2. Non-commutativity of addition
+a=1
+b=1
+a==b? no
+Using iomanip
+       tiny=0.00000000000000011
+1+tiny+tiny=1.00000000000000000
+tiny+tiny+1=1.00000000000000022
+d1==d2? false
+d1=0.79999999999999993
+d2=0.80000000000000004
+Comparing doubles task
+d1 = 0.79999999999999993
+d2 = 0.80000000000000004
+d1 == d2? no
+approx(d1,d2)? yes
