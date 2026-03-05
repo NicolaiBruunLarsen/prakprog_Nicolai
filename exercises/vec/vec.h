@@ -38,5 +38,16 @@ vec operator*(const vec&, double);
 vec operator*(double, const vec&);
 vec operator/(const vec&, double);
 
+// dot product like in C# test: u % v
+double operator%(const vec&, const vec&);
+
+// optional: cross product operator (not required by your snippet, but useful)
+vec operator^(const vec&, const vec&);
+
+// norm
+double norm(const vec&);
+
+
+
 // approximate equality
 bool approx(const vec&, const vec&, double acc = 1e-6, double eps = 1e-6);
