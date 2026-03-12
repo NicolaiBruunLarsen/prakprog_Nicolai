@@ -1,0 +1,19 @@
+
+
+*******************************************************************************
+Thu Mar 12 17:34:14 2026
+
+
+FIT:    data read from "out.times.data" using 1:2
+        format = x:z
+        #datapoints = 71
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*x*x+b
+fitted parameters initialized with current variable values
+
+Warning: Initial value of parameter 'b' is zero.
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.2781365449e+18   0.00e+00  9.49e+07    1.000000e-01   1.000000e-30
+BREAK: Singular matrix in Invert_RtR
