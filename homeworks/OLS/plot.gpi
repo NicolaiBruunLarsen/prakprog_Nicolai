@@ -1,0 +1,25 @@
+set terminal svg background "white"
+
+set output "plot.fit.svg"
+set xlabel "time t [days]"
+set ylabel "activity y [relative units]"
+set title "Rutherford-Soddy ThX decay fit"
+set grid
+set key right top
+plot \
+    "out.data.txt" using 1:2:3 with yerrorbars title "data", \
+    "out.fit.txt" using 1:2 with lines title "best fit", \
+    "out.fit.txt" using 1:3 with lines dashtype 2 title "c0+dc0, c1+dc1", \
+    "out.fit.txt" using 1:6 with lines dashtype 2 title "c0-dc0, c1-dc1"
+
+set output "plot.logfit.svg"
+set xlabel "time t [days]"
+set ylabel "ln(y)"
+set title "Linear fit to ln(y)=ln(a)-lambda*t"
+set grid
+set key right top
+plot \
+    "out.data.txt" using 1:4:5 with yerrorbars title "log-data", \
+    "out.logfit.txt" using 1:2 with lines title "best fit", \
+    "out.logfit.txt" using 1:3 with lines dashtype 2 title "c0+dc0, c1+dc1", \
+    "out.logfit.txt" using 1:6 with lines dashtype 2 title "c0-dc0, c1-dc1"
