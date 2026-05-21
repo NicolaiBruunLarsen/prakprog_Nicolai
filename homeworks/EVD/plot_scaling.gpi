@@ -1,0 +1,22 @@
+set terminal svg background "white"
+set output "times.svg"
+
+set xlabel "Dimension of random matrix N"
+set ylabel "Real time (s)"
+set title "Time for cyclic Jacobi EVD"
+
+set grid
+set key left top
+
+a = 1
+b = 1
+c = 1
+d = 1
+
+f(x) = a*x*x*x + b*x*x + c*x + d
+
+fit f(x) "out.times.txt" using 1:2 via a,b,c,d
+
+plot \
+    "out.times.txt" using 1:2 with linespoints title "Data", \
+    f(x) with lines title "fit as O(N^3)"

@@ -1,0 +1,26 @@
+set terminal svg background "white"
+
+set output "convergence.dr.svg"
+set xlabel "dr"
+set ylabel "ground state energy epsilon_0"
+set grid
+plot "out.convergence.dr.txt" using 1:2 with linespoints title "numeric", \
+     "out.convergence.dr.txt" using 1:3 with lines title "exact"
+
+set output "convergence.rmax.svg"
+set xlabel "rmax"
+set ylabel "ground state energy epsilon_0"
+set grid
+plot "out.convergence.rmax.txt" using 1:2 with linespoints title "numeric", \
+     "out.convergence.rmax.txt" using 1:3 with lines title "exact"
+
+set output "wavefunctions.svg"
+set xlabel "r"
+set ylabel "f(r)"
+set grid
+plot "out.wavefunctions.txt" using 1:2 with lines title "numeric f0", \
+     "out.wavefunctions.txt" using 1:3 with lines title "exact f0", \
+     "out.wavefunctions.txt" using 1:4 with lines title "numeric f1", \
+     "out.wavefunctions.txt" using 1:5 with lines title "exact f1", \
+     "out.wavefunctions.txt" using 1:6 with lines title "numeric f2", \
+     "out.wavefunctions.txt" using 1:7 with lines title "exact f2"
