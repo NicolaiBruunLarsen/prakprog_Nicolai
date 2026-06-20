@@ -1,0 +1,35 @@
+Part A:
+integral                         result             exact              ncalls
+int_0^1 sqrt(x) dx              0.6666666796852266  0.6666666666666666  276
+int_0^1 1/sqrt(x) dx            1.999997387964028  2  17140
+int_0^1 sqrt(1-x^2) dx          0.7853981705785724  0.7853981633974483  384
+int_0^1 log(x)/sqrt(x) dx       -3.999998348990209  -4  29972
+
+erf(1) = 0.8427007941993609
+tabulated erf(1) = 0.8427007929497149
+
+Part B:
+1/sqrt(x), ordinary:       1.999998831729758   calls = 21412
+1/sqrt(x), Clenshaw-Curtis:1.999999933419693   calls = 56
+log(x)/sqrt(x), ordinary:       -3.999999251724434   calls = 209100
+log(x)/sqrt(x), Clenshaw-Curtis:-3.999999374214894   calls = 336
+
+Infinite limits using transformation + Clenshaw-Curtis
+int_0^inf exp(-x) dx       0.9999998442290619  exact 1, calls = 232
+int_-inf^inf exp(-x^2) dx  1.772453240504873  exact sqrt(pi), calls = 672
+
+
+Comparison with Python/scipy
+Integral of 1/sqrt(x) from 0 to 1
+ordinary integrator: 1.999998831729758  ncalls = 21412
+Clenshaw-Curtis:     1.999999933419693  ncalls = 56
+Python/scipy:        1.999999999999998  ncalls = 231
+
+Integral of ln(x)/sqrt(x) from 0 to 1
+ordinary integrator: -3.999999251724434  ncalls = 209100
+Clenshaw-Curtis:     -3.999999374214894  ncalls = 336
+Python/scipy:        -4.000000000000085  ncalls = 315
+
+Part C:
+Integrate log(x)/sqrt(x) from 0 to 1
+result = -3.999999251724434  estimated error = 5.794111221691255e-05  true error = 7.482755659538043e-07
