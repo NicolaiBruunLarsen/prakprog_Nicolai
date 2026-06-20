@@ -40,7 +40,7 @@ std::tuple<double,double> plainmc_lcg(func f, vec a, vec b, int N, unsigned int 
 
 std::tuple<double,double> plainmc_std(func f, vec a, vec b, int N, unsigned int seed)
 {
-	std::mt19937 gen(seed);
+	std::mt19937 gen(seed); // random number generator in C++ standard library
 	std::uniform_real_distribution<double> dist(0.0,1.0);
 	return plainmc(f,a,b,N,[&](){return dist(gen);});
 }

@@ -78,7 +78,7 @@ int main()
 
 	std::cout << "Difficult integral, exact = " << exact << "\n";
 	std::cout << "LCG:          " << Q_lcg   << "  estimated error = " << err_lcg   << "  actual error = " << std::abs(Q_lcg-exact) << "\n";
-	std::cout << "std::mt19937: " << Q_std   << "  estimated error = " << err_std   << "  actual error = " << std::abs(Q_std-exact) << "\n";
+	std::cout << "standard C++: " << Q_std   << "  estimated error = " << err_std   << "  actual error = " << std::abs(Q_std-exact) << "\n";
 	std::cout << "Halton:       " << Q_quasi << "  estimated error = " << err_quasi << "  actual error = " << std::abs(Q_quasi-exact) << "\n\n";
 
 	std::cout << "Part C: recursive stratified sampling\n";
