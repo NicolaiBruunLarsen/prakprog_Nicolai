@@ -1,0 +1,13 @@
+Part A: plain Monte Carlo
+area of unit circle = 3.13912  error estimate = 0.005198466721640141  exact = 3.141592653589793
+volume of ellipsoid = 25.21656  error estimate = 0.05359664083533595  exact = 25.13274122871834
+
+Part B: quasi-random sequences
+Difficult integral, exact = 1.393203929685677
+LCG:          1.375549778494497  estimated error = 0.01127350048758913  actual error = 0.01765415119117963
+std::mt19937: 1.384856247725241  estimated error = 0.01726085625828368  actual error = 0.008347681960436004
+Halton:       1.387285647184784  estimated error = 0.01615975399224445  actual error = 0.005918282500892547
+
+Part C: recursive stratified sampling
+circle plain:       3.14568  error = 0.007331326397862803  actual error = 0.004087346410206916
+circle stratified:  3.128532465717627  error = 0.007991979163504788  actual error = 0.01306018787216567
