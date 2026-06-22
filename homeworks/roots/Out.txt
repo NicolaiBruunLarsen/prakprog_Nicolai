@@ -1,0 +1,17 @@
+Part A: Newton method
+root of x^2-2 starting at 1: {1.414213562374687}  f(x)=4.503952766299335e-12
+root of circle/line system:      {0.7071067811865837, 0.7071067811865837}  f(x)=1.021405182655144e-13
+
+Rosenbrock minimum from gradient: {0.9999999997086219, 0.9999999994076622}  |grad|=3.772782038850213e-09
+Himmelblau minima from different starts:
+start {3, 2} -> {3, 2}  |grad|=0
+start {-3, 3} -> {-2.805118096003846, 3.131312520155976}  |grad|=6.022287915396436e-07
+start {-4, -3} -> {-3.77931025337792, -3.283185991286874}  |grad|=5.730715053937009e-11
+start {4, -2} -> {3.584428340330691, -1.848126526964643}  |grad|=1.998449628947756e-11
+
+Part B: Hydrogen shooting method
+rmin=0.001 rmax=8 E0=-0.4999751026575858 exact -0.5, error=2.489734241417629e-05
+wrote out.wavefunction.txt and convergence files
+
+Part C: quadratic interpolation line-search
+Rosenbrock with quadratic line-search: {0.999999999999818, 0.9999999999996357}  |grad|=2.401287928819608e-13
