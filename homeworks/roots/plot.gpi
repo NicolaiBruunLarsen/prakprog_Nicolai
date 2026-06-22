@@ -5,8 +5,8 @@ set title "Hydrogen ground-state wavefunction"
 set xlabel "r"
 set ylabel "f(r)"
 set grid
-plot "out.wavefunction.txt" using 1:2 with lines title "Calculated", \
-     "out.wavefunction.txt" using 1:3 with lines title "exact r exp(-r)"
+plot "out_wavefunction.txt" using 1:2 with lines title "Calculated", \
+     "out_wavefunction.txt" using 1:3 with lines title "exact r exp(-r)"
 
 set output "fig_convergence_rmax.svg"
 set title "Convergence with rmax"
@@ -14,7 +14,7 @@ set xlabel "rmax"
 set ylabel "|E+1/2|"
 set logscale y
 set grid
-plot "out.convergence.rmax.txt" using 1:3 with linespoints title "energy error"
+plot "out_convergence_rmax.txt" using 1:3 with linespoints title "energy error"
 unset logscale y
 
 set output "fig_convergence_rmin.svg"
@@ -24,7 +24,7 @@ set ylabel "|E+1/2|"
 set logscale x
 set logscale y
 set grid
-plot "out.convergence.rmin.txt" using 1:3 with linespoints title "energy error"
+plot "out_convergence_rmin.txt" using 1:3 with linespoints title "energy error"
 unset logscale x
 unset logscale y
 
@@ -35,6 +35,6 @@ set ylabel "|E+1/2|"
 set logscale x
 set logscale y
 set grid
-plot "out.convergence.acc.txt" using 1:3 with linespoints title "energy error"
+plot "out_convergence_acc.txt" using 1:3 with linespoints title "energy error"
 unset logscale x
 unset logscale y
