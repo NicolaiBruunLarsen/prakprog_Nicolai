@@ -1,0 +1,22 @@
+Part A: Newton minimization with numerical gradient and Hessian
+Rosenbrock minimum: start at {5, 10} -> x = {0.999993913559, 0.999987804224}  f(x) = 3.70973487231e-11  |grad| = 9.09328875435e-06  steps = 30
+Himmelblau minima from different starting points:
+start {20, 20} -> x = {2.99999997116, 1.99999999568}  f(x) = 3.35879502914e-14  |grad| = 3.93370117866e-08  steps = 10
+start {-2, 3} -> x = {-2.80511811153, 3.13131248799}  f(x) = 5.74061043126e-14  |grad| = 2.0576734034e-07  steps = 4
+start {-4, -3} -> x = {-3.77931030033, -3.28318603805}  f(x) = 1.62574680387e-13  |grad| = 1.63822845367e-08  steps = 4
+start {4, -2} -> x = {3.58442830727, -1.84812654023}  f(x) = 6.28911962179e-14  |grad| = 2.30144278529e-08  steps = 4
+
+Part B: Higgs Breit-Wigner fit
+m     = 125.972186723 GeV
+Gamma = 2.08633013078 GeV
+A     = 9.87621246414
+D     = 26.8695117787
+steps = 120
+
+Part C: forward versus central finite differences
+start at {20, 20}
+Rosenbrock forward: x = {0.999994189886, 0.999988354883}  f = 3.38195380027e-11  steps = 1000
+Rosenbrock central: x = {0.999999970993, 0.999999941985}  f = 8.41420152904e-16  steps = 75
+start at {20, 20}
+Himmelblau forward: x = {2.99999997116, 1.99999999568}  f = 3.35879502914e-14  steps = 10
+Himmelblau central: x = {2.99999999991, 1.99999999998}  f = 3.35787084062e-19  steps = 10

@@ -1,0 +1,8 @@
+set terminal svg background "white"
+set output "fig.higgs.fit.svg"
+set title "Breit-Wigner fit to Higgs data"
+set xlabel "E [GeV]"
+set ylabel "signal"
+set grid
+plot "out.higgs.data.txt" using 1:2:3 with yerrorbars title "data", \
+     "out.higgs.fit.txt" using 1:2 with lines title "fit"
