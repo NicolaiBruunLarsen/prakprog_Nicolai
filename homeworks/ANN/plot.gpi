@@ -1,0 +1,35 @@
+set terminal svg background "white"
+
+set output "fig.ann.response.svg"
+set title "ANN interpolation"
+set xlabel "x"
+set ylabel "y"
+set grid
+plot "out.ann.txt" using 1:2 with lines title "exact", \
+     "out.ann.txt" using 1:3 with lines title "ANN", \
+     "out.train.txt" using 1:2 with points pointtype 7 title "training points"
+
+set output "fig.ann.derivatives.svg"
+set title "ANN derivatives"
+set xlabel "x"
+set grid
+plot "out.ann.txt" using 1:4 with lines title "exact f'", \
+     "out.ann.txt" using 1:5 with lines title "ANN f'", \
+     "out.ann.txt" using 1:6 with lines title "exact f''", \
+     "out.ann.txt" using 1:7 with lines title "ANN f''"
+
+set output "fig.ann.integral.svg"
+set title "ANN anti-derivative"
+set xlabel "x"
+set ylabel "integral from -1 to x"
+set grid
+plot "out.ann.txt" using 1:8 with lines title "numerical integral of exact", \
+     "out.ann.txt" using 1:9 with lines title "ANN anti-derivative"
+
+set output "fig.ode.solution.svg"
+set title "ANN solution of y''+y=0"
+set xlabel "x"
+set ylabel "y"
+set grid
+plot "out.ode.txt" using 1:2 with lines title "sin(x)", \
+     "out.ode.txt" using 1:3 with lines title "ANN"

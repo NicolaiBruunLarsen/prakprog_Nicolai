@@ -1,0 +1,8 @@
+Part A: interpolation with artificial neural network
+number of hidden neurons = 6
+training steps = 25
+cost after training = 5.44343396273e-07
+
+Part C: ANN solution of y''+y=0, y(0)=0, y'(0)=1
+ODE training steps = 15
+ODE cost = 0.000475465910044
