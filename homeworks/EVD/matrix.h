@@ -8,7 +8,7 @@ struct matrix {
 private:
     int nrows_ = 0;
     int ncols_ = 0;
-    std::vector<double> data_; // row-major: data_[i*ncols_ + j]
+    std::vector<double> data_;
 
 public:
     matrix() = default;
@@ -17,11 +17,9 @@ public:
     int size1() const; // rows
     int size2() const; // columns
 
-    // Professor/homework style. Requires C++23: A[i,j]
     double& operator[](int i, int j);
     const double& operator[](int i, int j) const;
 
-    // Also keep ordinary function-call indexing available: A(i,j)
     double& operator()(int i, int j);
     const double& operator()(int i, int j) const;
 
