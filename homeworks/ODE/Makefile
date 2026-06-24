@@ -1,6 +1,8 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -O2 -Wall -Wextra
 
+all: run plot
+
 main: main.cc ODE.cc vector.cc
 	$(CXX) $(CXXFLAGS) main.cc ODE.cc vector.cc -o main
 
