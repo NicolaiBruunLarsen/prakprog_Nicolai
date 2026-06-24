@@ -1,4 +1,15 @@
-quadratic spline coefficients for y=cos(x)
+Part A: linear spline
+xs = {0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9}
+Integral from 0 to 0.5
+Exact integral from sin(x): 0.479426
+Calculated integral using linterpInteg: 0.469396
+
+Part B: quadratic spline
+Integral from 0 to 0.5
+Exact integral from sin(x): 0.479426
+Calculated integral using qspline.integ: 0.470386
+
+Quadratic spline coefficients for y=cos(x)
 i x[i] b[i] c[i]
 0 0 -0.221074 -0.0475227
 1 0.5 -0.268596 -0.811929
@@ -18,3 +29,8 @@ i x[i] b[i] c[i]
 15 7.5 -0.736969 -0.494603
 16 8 -1.23157 0.637097
 17 8.5 -0.594475 -0.0475227
+
+Data files written:
+data.txt
+data_lin.txt
+data_quad.txt

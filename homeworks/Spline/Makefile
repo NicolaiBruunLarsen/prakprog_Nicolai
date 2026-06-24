@@ -1,6 +1,10 @@
 CXX = g++
 CXXFLAGS = -std=c++23 -O2 -Wall -Wextra
 
+.PHONY: all run plot test clean
+
+all: run plot
+
 main: main.o Splines.o vector.o matrix.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
@@ -16,17 +20,17 @@ vector.o: vector.cc vector.h
 matrix.o: matrix.cc matrix.h vector.h
 	$(CXX) $(CXXFLAGS) -c matrix.cc
 
+Out.txt: main
+	./main > Out.txt
+
+run: Out.txt
+	cat Out.txt
+
+plot: Out.txt plot.gpi
+	gnuplot plot.gpi
+
 test: main
 	./main --test
-
-run: main
-	./main
-
-data.txt data_lin.txt data_quad.txt Out.txt: main
-	./main
-
-plot: data.txt data_lin.txt data_quad.txt plot.gpi
-	gnuplot plot.gpi
 
 clean:
 	$(RM) main *.o data.txt data_lin.txt data_quad.txt Out.txt *.svg *.log

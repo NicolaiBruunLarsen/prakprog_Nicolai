@@ -79,13 +79,37 @@ void make_data(){
 		     << qs.deriv(z) << " "
 		     << -std::sin(z) << "\n";
 
-	std::ofstream coefs("Out.txt");
-	coefs << "quadratic spline coefficients for y=cos(x)\n";
-	coefs << "i x[i] b[i] c[i]\n";
+	std::cout << "Part A: linear spline\n";
+	std::cout << "xs = {";
+	for(int i=0;i<x.size();i++){
+	    std::cout << x[i];
+	    if(i+1<x.size()) std::cout << ", ";
+	}
+	std::cout << "}\n";
+	
+	double z = 0.5;
+	double exact_integral = std::sin(z)-std::sin(x[0]);
+	double lin_integral = pp::linterpInteg(x,y,z);
+	
+	std::cout << "Integral from " << x[0] << " to " << z << "\n";
+	std::cout << "Exact integral from sin(x): " << exact_integral << "\n";
+	std::cout << "Calculated integral using linterpInteg: " << lin_integral << "\n\n";
+	
+	std::cout << "Part B: quadratic spline\n";
+	double quad_integral = qs.integ(z);
+	std::cout << "Integral from " << x[0] << " to " << z << "\n";
+	std::cout << "Exact integral from sin(x): " << exact_integral << "\n";
+	std::cout << "Calculated integral using qspline.integ: " << quad_integral << "\n\n";
+	
+	std::cout << "Quadratic spline coefficients for y=cos(x)\n";
+	std::cout << "i x[i] b[i] c[i]\n";
 	for(int i=0;i<qs.b.size();i++)
-		coefs << i << " " << x[i] << " " << qs.b[i] << " " << qs.c[i] << "\n";
-
-	std::cout << "wrote data.txt, data_lin.txt, data_quad.txt, Out.txt\n";
+	    std::cout << i << " " << x[i] << " " << qs.b[i] << " " << qs.c[i] << "\n";
+	
+	std::cout << "\nData files written:\n";
+	std::cout << "data.txt\n";
+	std::cout << "data_lin.txt\n";
+	std::cout << "data_quad.txt\n";
 }
 
 int main(int argc, char** argv){
