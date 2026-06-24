@@ -2,6 +2,8 @@ CXX = g++
 CXXFLAGS = -std=c++23 -O2 -Wall -Wextra
 LDLIBS = -lm
 
+all: run plot
+
 main: main.cc vector.cc matrix.cc QR.cc lsfit.cc
 	$(CXX) $(CXXFLAGS) main.cc vector.cc matrix.cc QR.cc lsfit.cc -o main $(LDLIBS)
 
