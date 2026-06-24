@@ -1,7 +1,7 @@
 
 
 *******************************************************************************
-Mon Jun 22 16:48:35 2026
+Wed Jun 24 17:37:16 2026
 
 
 FIT:    data read from "out.times.txt" using 1:2
@@ -14,23 +14,23 @@ function used for fitting: f(x)
 fitted parameters initialized with current variable values
 
 iter      chisq       delta/lim  lambda   a             b             c             d            
-   0 1.9404132466e+13   0.00e+00  6.06e+05    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
-  10 4.4098976745e-06  -4.60e-02  6.06e-05    3.106025e-08   8.758661e-07  -7.285017e-05   1.637482e-03
+   0 1.9404132482e+13   0.00e+00  6.06e+05    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  10 1.1968899956e-06  -1.71e-01  6.06e-05    3.874747e-08  -1.140070e-06   7.333611e-05  -1.193493e-03
 
 After 10 iterations the fit converged.
-final sum of squares of residuals : 4.4099e-06
-rel. change during last iteration : -4.60086e-07
+final sum of squares of residuals : 1.19689e-06
+rel. change during last iteration : -1.70528e-06
 
 degrees of freedom    (FIT_NDF)                        : 9
-rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000699992
-variance of residuals (reduced chisquare) = WSSR/ndf   : 4.89989e-07
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000364675
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.32988e-07
 
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
-a               = 3.10603e-08      +/- 4.878e-09    (15.71%)
-b               = 8.75866e-07      +/- 1.181e-06    (134.9%)
-c               = -7.28502e-05     +/- 8.538e-05    (117.2%)
-d               = 0.00163748       +/- 0.001771     (108.2%)
+a               = 3.87475e-08      +/- 2.541e-09    (6.559%)
+b               = -1.14007e-06     +/- 6.153e-07    (53.97%)
+c               = 7.33361e-05      +/- 4.448e-05    (60.65%)
+d               = -0.00119349      +/- 0.0009229    (77.33%)
 
 correlation matrix of the fit parameters:
                 a      b      c      d      
