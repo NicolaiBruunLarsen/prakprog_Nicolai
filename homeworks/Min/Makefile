@@ -3,6 +3,8 @@ CXXFLAGS = -std=c++23 -O2 -Wall -Wextra
 
 OBJ = main.o vector.o matrix.o QR.o min.o
 
+all: run plot
+
 main: $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o main
 
