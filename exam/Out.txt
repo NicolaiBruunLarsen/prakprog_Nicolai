@@ -1,0 +1,13 @@
+"Stochastic gradient descent" training of a network
+hidden neurons = 6
+training points = 25
+
+method                         cost                minimizer steps
+all parameters at once        5.44343396273e-07   25
+one neuron at a time          4.51905031896e-05   129
+one parameter set at a time   2.84947061809e-05   56
+random parameter subset       0.000748963310457   47
+
+The values of the cost function for the different training methods are shown in fig.costs.svg.
+I can conclude that for this run it is better to train all parameters at once, but the other methods are still able to reach a reasonable cost.
+It could look like the single neuron training is good, but is also has the biggets amount of minimizer steps.
