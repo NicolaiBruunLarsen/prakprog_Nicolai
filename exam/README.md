@@ -45,4 +45,4 @@ fig.costs.svg    compares the final cost/loss for each method
 
 The cost plot shows which method gives the smallest final loss. The number of minimizer steps is also included in Out.txt because the different methods do not necessarily use the same amount of training work. A method with a lower cost is not automatically better if it used many more minimizer steps.
 
-i have completet all the tasks therefore i think this could be a 10/10.
+I have completed all the tasks therefore i think this could be a 10/10.
