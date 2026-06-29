@@ -204,6 +204,8 @@ int ann::train_parameter_sets(vector xs, vector ys, int sweeps, double acc, int 
 	return steps;
 }
 
+
+// copilot helped me with this function
 int ann::train_random(vector xs, vector ys, int sweeps, int nsubset, double acc, int max_iter, unsigned seed){
 	initialize(xs[0],xs[xs.size()-1]);
 	fit_weights(xs,ys);
